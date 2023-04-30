@@ -10,5 +10,6 @@
 - Sylib Controller Tutorial
 - LVGL Tutorial
 - Auton Selection
+- Pong
 
 ##### [Home](https://alxsz12.github.io/) 
