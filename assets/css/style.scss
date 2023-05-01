@@ -4,25 +4,7 @@
 @import "{{ site.theme }}";
 
 body {
-    font: comicsans;
-    color: #000000;
-}
-
-header {   
-    background: #000000; 
-    h1 {
-        color: #800080;
+    header {
+         color: #800080;
     }
-}
-
-#banner { 
-    background: #800080;
-    h1{
-        color: #000000;
-    }
-}
-
-button 
-{
-    background: #800080;
 }
