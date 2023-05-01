@@ -3,6 +3,8 @@ theme: minima
 title: 333R Online Development Documentation
 author: alxsz12
 
+show_excerpts: true
+
 header_pages:
   - README.md
   - Tutorials.md
