@@ -1,4 +1,5 @@
 theme: minima
+
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
@@ -11,3 +12,6 @@ show_excerpts: true
 header_pages:
   - README.md
   - Tutorials.md
+
+minima:
+  skin: dark
