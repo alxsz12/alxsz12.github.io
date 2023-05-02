@@ -4,11 +4,3 @@
 @import
   "minima/skins/{{ site.minima.skin | default: 'dark' }}",
   "minima/initialize";
-
-body {
-    header {
-        #banner {
-         color: #800080;
-        }
-    }
-}
