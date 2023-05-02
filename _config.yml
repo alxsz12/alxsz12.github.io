@@ -1,4 +1,7 @@
 theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
 
 title: 333R Online Development Documentation
 author: alxsz12
