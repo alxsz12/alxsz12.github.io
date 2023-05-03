@@ -16,7 +16,7 @@ module MinimaDemo
 
   class SkinPage < Jekyll::PageWithoutAFile
     def initialize(site, skin_name)
-      super(site, site.source, "assets/css", "#{skin_name}.scss")
+      # super(site, site.source, "assets/css", "#{skin_name}.scss")
     end
   end
 
