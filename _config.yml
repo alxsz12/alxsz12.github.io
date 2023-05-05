@@ -15,11 +15,8 @@ description: >
 theme: minima
 
 # Build settings
-baseurl: /minima
-remote_theme: jekyll/minima
 plugins:
   - jekyll-feed
-  - jekyll-remote-theme
   - jekyll-seo-tag
 
 # Theme-specific settings
@@ -59,6 +56,6 @@ header_pages:
 
 # Set to `true` to show excerpts on the homepage.
 #
-show_excerpts: false
+#show_excerpts: false
 
 
