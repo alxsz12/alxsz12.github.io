@@ -17,7 +17,7 @@ $lm-brand-color-dark:      darken($lm-brand-color, 25%) !default;
 $lm-site-title-color:      $lm-brand-color-dark !default;
 
 $lm-text-color:            #111111 !default;
-$lm-background-color:      #7f0985 !default;
+$lm-background-color:      #fdfdfd !default;
 $lm-code-background-color: #eeeeff !default;
 
 $lm-link-base-color:       #2a7ae2 !default;
@@ -113,7 +113,7 @@ $dm-brand-color-dark:      darken($dm-brand-color, 35%) !default;
 $dm-site-title-color:      $dm-brand-color-light !default;
 
 $dm-text-color:            #bbbbbb !default;
-$dm-background-color:      #7b0b49 !default;
+$dm-background-color:      #181818 !default;
 $dm-code-background-color: #212121 !default;
 
 $dm-link-base-color:       #79b8ff !default;
@@ -126,7 +126,7 @@ $dm-border-color-03:       $dm-brand-color !default;
 
 $dm-table-text-color:      $dm-text-color !default;
 $dm-table-zebra-color:     lighten($dm-background-color, 4%) !default;
-$dm-table-header-bg-color: lighten($dm-background-color, 10%) !default;
+$dm-table-header-bg-color: #7b0b49 !default; //lighten($dm-background-color, 10%) !default;
 $dm-table-header-border:   lighten($dm-background-color, 21%) !default;
 $dm-table-border-color:    $dm-border-color-01 !default;
 
