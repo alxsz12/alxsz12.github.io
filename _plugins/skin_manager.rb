@@ -25,7 +25,7 @@ module MinimaDemo
       MinimaDemo.available_skins.each do |skin_name|
         site.pages << SkinPage.new(site, skin_name).tap do |page|
           page.data["skin_name"] = skin_name
-          page.content = <<~SCSS
+          page.content = <<~ SCSS
             @import
               "minima/skins/{{ page.skin_name }}",
               "minima/initialize";
