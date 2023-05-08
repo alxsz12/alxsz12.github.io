@@ -1,0 +1,253 @@
+---
+---
+// Overall
+body
+  display: flex
+  min-height: 100vh
+  flex-direction: column
+
+a
+  color: #bdbdbd
+
+a:hover
+  text-decoration: underline
+
+a:active
+  text-decoration: underline
+
+main
+  flex: 1 0 auto
+
+header,
+main,
+footer
+  padding-left: 300px
+
+.container
+  width: 90%
+
+// Header
+header
+  height: 80px
+
+  a:hover
+    text-decoration: none
+
+  .background
+    background: -webkit-linear-gradient(90deg, #6A1B9A 50%, #4a0078 99%)
+    background: linear-gradient(90deg, #6A1B9A 50%, #4a0078 99%)
+
+a
+  &.button-collapse
+    &.top-nav
+      position: absolute
+      text-align: center
+      height: 48px
+      width: 48px
+      top: 0
+      float: none
+      color: #fff
+      font-size: 36px
+      z-index: 999
+      line-height: 80px
+
+nav
+  .page-title
+    font-size: 36px
+    font-weight: bold
+    line-height: 80px
+
+nav
+  &.top-nav
+    height: 80px
+
+.header-space
+  height: 0px
+  padding: 0px
+
+.post-title
+  font-weight: bold
+
+// Footer
+footer.page-footer
+  margin-top: 10px
+
+  .row
+    margin-bottom: 0px
+
+  p
+    margin-top: 5px
+
+.footer-space
+  height: 0px
+  padding: 0px
+
+// Misc
+blockquote
+  background: rgba(106, 27, 154, .15)
+  border-left-color: rgba(106, 27, 154, 1)
+  padding-left: 15px
+  page-break-inside: avoid
+
+mark
+  background: rgba(106, 27, 154, .15)
+
+main
+  ul
+    &:not(.browser-default)
+      padding-left: 40px
+
+      li
+        list-style-type: disc
+    ul
+      list-style-type: circle
+
+.table-wrap
+  padding: 0px
+  border: none
+
+#print-timestamp
+  display: none
+
+ul
+  .list2
+    columns: 2
+
+.filler
+  visibility: hidden
+
+.Analyze,
+.Research,
+.Design,
+.Create,
+.Test,
+.Reflect,
+.Management
+  border-style: solid
+  box-sizing: content-box
+
+.Analyze
+  border-color: red
+  background-color: rgba(255,0,0,0.2)
+
+.Research
+  border-color: orange
+  background-color: rgba(255,165,0,0.2)
+
+.Design
+  border-color: yellow
+  background-color: rgba(255,255,0,0.2)
+
+.Create
+  border-color: green
+  background-color: rgba(0,128,0,0.2)
+
+.Test
+  border-color: blue
+  background-color: rgba(0,0,255,0.2)
+
+.Reflect
+  border-color: indigo
+  background-color: rgba(75,0,130,0.2)
+
+.Management
+  border-color: violet
+  background-color: rgba(238,130,238,0.2)
+
+p
+  code
+    background-color: lightgrey
+    padding: 0px 2px
+    font-size: 92%
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+  font-weight: 500
+
+h6
+  font-size: 1.2rem
+
+table, th, td
+  border: 1px solid
+
+td
+  vertical-align: top
+
+th
+  text-align: center
+
+@media only screen and (max-width: 992px)
+  header,
+  main,
+  footer
+    padding-left: 0
+
+  nav
+    .nav-wrapper
+      text-align: center
+
+@media only screen and (max-width: 600px)
+  nav
+    .page-title
+      font-size: 20px
+
+@media only print
+  header,
+  main,
+  footer
+    padding-left: 0
+
+  .hide-on-large-only,
+  .side-nav
+    display: none
+
+  header
+    nav
+      &.top-nav
+        height: 40px
+      .container
+        height: 40px
+      .page-title
+        font-size: 18px
+        font-weight: bold
+        line-height: 40px
+
+  header
+    height: 40px
+    position: fixed
+    top: 0
+    width: 100%
+
+  .header-space
+    height: 40px
+
+  .post-title
+    font-size: 2.4em
+
+  nav.top-nav.purple.darken-3
+    line-height: 40px
+
+  .no-print
+    display: none
+
+  footer
+    position: fixed
+    bottom: 0
+    width: 100%
+    &.page-footer
+      .footer-copyright
+        min-height: 40px
+        height: 40px
+
+  .footer-space
+    height: 40px
+
+  .page-footer
+    padding-top: 0px
+
+  #print-timestamp
+    display: block
