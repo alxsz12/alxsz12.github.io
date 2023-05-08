@@ -55,7 +55,7 @@ minima:
 
 header_pages:
   - index.md
-  - Tutorials.md
+  - References.md
 
 # Set to `true` to show excerpts on the homepage.
 #
