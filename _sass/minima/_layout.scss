@@ -27,6 +27,13 @@
     color: $site-title-color;
   }
 }
+.site-title::before {
+	content: url("/Losrobos.png");
+	display: inline-block;
+	position: relative;
+	width: 32px;
+	top: 32px;
+}
 
 .site-nav {
   position: absolute;
