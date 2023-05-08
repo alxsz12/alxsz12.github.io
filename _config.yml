@@ -54,7 +54,7 @@ minima:
 #
 
 header_pages:
-  - README.md
+  - index.md
   - Tutorials.md
 
 # Set to `true` to show excerpts on the homepage.
