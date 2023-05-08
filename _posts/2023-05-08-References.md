@@ -1,7 +1,7 @@
 ---
 layout: post
 ---
-
+</p>
 <details><summary>Project Links</summary>
 
 - [alxsz12's Github](https://github.com/alxsz12)
@@ -9,4 +9,4 @@ layout: post
 - [Odom Debug]()
 
 </details>
-
+</p>
