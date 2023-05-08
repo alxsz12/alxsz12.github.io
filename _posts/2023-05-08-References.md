@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "References"
-date: 2023-05-8
-author: "Alex Seitz"
+date: 2023-05-08
+author: Alex Seitz
 categories: Links
 ---
 
