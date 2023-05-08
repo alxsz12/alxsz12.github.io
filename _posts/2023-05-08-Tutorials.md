@@ -4,7 +4,8 @@ author: Alex Seitz
 tags: Links
 ---
 
-<details><summary>Tutorial Links</summary>
+<details>
+<summary>Tutorial Links</summary>
 
 - [PROS Tutorial]()
 - [Okapilib Tutorial]()
