@@ -1,5 +1,7 @@
 ---
 layout: post
+author: Alex Seitz
+tags: Links
 ---
 
 <details><summary>Tutorial Links</summary>
