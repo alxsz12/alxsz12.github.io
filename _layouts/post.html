@@ -1,38 +1,75 @@
 ---
-layout: base
+layout: default
+css: ["post.css"]
+js: ["post.js"]
 ---
-<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+<div id="post-info">
+  <ul class="collapsible hoverable" data-collapsible="accordion">
+    <li>
+      <div class="collapsible-header">
+        <span>
+          <i class="material-icons tooltipped" data-position="left" data-delay="30" data-tooltip="Date">date_range</i>
+          {{page.date | date: "%m/%d/%Y"}}
+          <i id="indicate" class="right material-icons tooltipped" data-position="left" data-delay="30"
+            data-tooltip="Show extra info">info</i>
+        </span>
+      </div>
+      <div class="collapsible-body">
+        <span>
+          {% if page.author %}
+          <i class="material-icons tooltipped" data-position="left" data-delay="30" data-tooltip="Categories">create</i>
+          <a href="{{site.baseurl}}/about" target="_blank">
+            <div class="chip">{{page.author}}</div>
+          </a>
+          {% endif %}
+        </span>
+        <span>
+          <i class="material-icons tooltipped" data-position="left" data-delay="30" data-tooltip="Categories">sort</i>
+          {% for cat in page.categories %}
+          {% capture test %}{{cat | slice: 0}}{% endcapture %}
+          {% capture testup %}{{cat | slice: 0 | upcase}}{% endcapture %}
+          <a href="{{site.baseurl}}/categories#{{cat | slugify}}{% if test == testup %}_cap{% endif %}" target="_blank">
+            <div class="chip {{cat}}">{{cat}}</div>
+          </a>
+          {% endfor %}
+        </span>
+        {% if page.tags[0] %}
+        <span>
+          <i class="material-icons tooltipped" data-position="left" data-delay="30" data-tooltip="Tags">label</i>
+          {% for tag in page.tags %}
+          {% capture test %}{{tag | slice: 0}}{% endcapture %}
+          {% capture testup %}{{tag | slice: 0 | upcase}}{% endcapture %}
+          <a href="{{site.baseurl}}/tags#{{tag | slugify}}{% if test == testup %}_cap{% endif %}" target="_blank">
+            <div class="chip">{{tag}}</div>
+          </a>
+          {% endfor %}
+        </span>
+        {% endif %}
+      </div>
+    </li>
+  </ul>
 
-  <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
-    <p class="post-meta">
-      {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-      <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-        {{ page.date | date: date_format }}
-      </time>
-      {%- if page.modified_date -%}
-        ~ 
-        {%- assign mdate = page.modified_date | date_to_xmlschema -%}
-        <time class="dt-modified" datetime="{{ mdate }}" itemprop="dateModified">
-          {{ mdate | date: date_format }}
-        </time>
-      {%- endif -%}
-      {%- if page.author -%}
-        • {% for author in page.author %}
-          <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <span class="p-author h-card" itemprop="name">{{ author }}</span></span>
-            {%- if forloop.last == false %}, {% endif -%}
-        {% endfor %}
-      {%- endif -%}</p>
-  </header>
-
-  <div class="post-content e-content" itemprop="articleBody">
+</div>
+<div class="divider no-print"></div>
+<div class="row">
+  <div class="col s12">
     {{ content }}
   </div>
-
-  {%- if site.disqus.shortname -%}
-    {%- include disqus_comments.html -%}
-  {%- endif -%}
-
-  <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
-</article>
+</div>
+{% if site.disqus_shortname and page.comments %}
+<div id="disqus_thread"></div>
+<script>
+  var disqus_config = function () {
+    this.page.url = "{{site.url}}{{site.baseurl}}{{page.url}}";
+    this.page.identifier = "{{page.id}}";
+  };
+  (function () { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = '//{{site.disqus_shortname}}.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
+    Disqus.</a></noscript>
+{% endif %}
