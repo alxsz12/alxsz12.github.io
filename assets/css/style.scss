@@ -1,8 +1,4 @@
----
----
-
-@import "{{ site.theme }}";
-
+@import "minima";
   // "sass/minima/skins/{{ site.minima.skin | default: 'classic' }}",
   // "sass/minima/initialize";
   
