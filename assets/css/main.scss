@@ -1,0 +1,4 @@
+@import
+  "sass/minima/skins/{{ site.minima.skin | default: 'classic' }}",
+  "sass/minima/initialize";
+  
