@@ -43,3 +43,31 @@
       border-color: transparent transparent $table-header-bg-color;
     }
   }
+
+//--------
+
+.custom-loader {
+  width: 100px;
+  height: 100px;
+  display: grid;
+  border-radius: 50%;
+  background: conic-gradient(#766DF4 25%,#E4E4ED 0 50%,#6F6D91 0 75%,#766DF4 0);
+  animation: s2 2s infinite linear;
+}
+.custom-loader::before,
+.custom-loader::after {
+   content:"";
+   grid-area: 1/1;
+   margin:15%;
+   border-radius: 50%;
+   background:inherit;
+   animation:inherit;
+}
+.custom-loader::after {
+   margin:25%;
+   animation-duration: 3s;
+}
+
+@keyframes s2 {
+  100% {transform: rotate(1turn)}
+}
