@@ -7,7 +7,7 @@ tags: Links
 <details>
 <summary>Tutorial Links</summary>
 
-- [PROS Tutorial]()
+- [PROS Tutorial](_tutorials/PROS.md)
 - [Okapilib Tutorial]()
 - [PID & Slew Tutorial]()
 - [Lift Pid]()
