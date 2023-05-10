@@ -4,7 +4,7 @@ author: Alex Seitz
 tags: Links
 ---
 
-- [ ] [PROS Tutorial](_tutorials/PROS.md)
+- [ ] [PROS Tutorial](_tutorials/2023-05-05-PROS.md)
 - [ ] [Okapilib Tutorial]()
 - [ ] [PID & Slew Tutorial]()
 - [ ] [Lift Pid]()
