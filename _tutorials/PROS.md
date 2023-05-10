@@ -1,6 +1,5 @@
 ---
 layout: base
-author: Alex Seitz
 ---
 
 ## Where to start?
