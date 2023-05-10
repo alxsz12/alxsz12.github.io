@@ -1,4 +1,6 @@
 <header class="site-header">
+  {% include losrobos.html %}
+  {% include loader.html %}
 
   <div class="wrapper">
     {%- assign default_paths = site.pages | map: "path" -%}
@@ -25,7 +27,5 @@
         </div>
       </nav>
     {%- endif -%}
-  {% include losrobos.html %}
-  {% include loader.html %}
   </div>
 </header>
