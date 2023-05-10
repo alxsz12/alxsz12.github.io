@@ -15,15 +15,6 @@
             </svg>
           </span>
         </label>
-        <style>
-            img {
-              vertical-align: text-top;
-            }
-          </style>
-        </head>
-        <body>
-          <img src="Losrobos.png"  height="16px" width="16px" />
-        </body>
         <div class="trigger">
           {%- for path in page_paths -%}
             {%- assign my_page = site.pages | where: "path", path | first -%}
