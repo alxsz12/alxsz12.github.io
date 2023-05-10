@@ -4,6 +4,7 @@ author: Alex Seitz
 tags: Links
 ---
 
+
 - [ ] [PROS Tutorial](_tutorials/PROS.md)
 - [ ] [Okapilib Tutorial]()
 - [ ] [PID & Slew Tutorial]()
@@ -17,3 +18,4 @@ tags: Links
 - [ ] [Auton Selection]()
 - [ ] [Pong]()
 
+#### Check Of The Tutorials You've Completed!
