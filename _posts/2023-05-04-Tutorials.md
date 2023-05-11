@@ -1,6 +1,7 @@
 ---
 layout: post
 author: Alex Seitz
+hidden: true
 ---
 
 - [ ] [PROS Tutorial](/../../../_tutorials/PROS.md)
