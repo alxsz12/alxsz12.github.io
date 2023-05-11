@@ -60,11 +60,17 @@ layout: base
         padding: 20px;
         white-space: pre-wrap;
         word-wrap: break-word;
+        position: relative;
+      }
+
+      pre::selection {
+        background-color: #0078d7;
+        color: #fff;
       }
 
       .code {
+        position: relative;
         animation: delete 5s forwards;
-        opacity: 1;
       }
 
       @keyframes delete {
@@ -72,6 +78,26 @@ layout: base
           opacity: 1;
         }
         100% {
+          opacity: 0;
+        }
+      }
+
+      .cursor {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background-color: #fff;
+        animation: blink 1s infinite;
+      }
+
+      @keyframes blink {
+        0%, 50% {
+          opacity: 1;
+        }
+        51%, 100% {
           opacity: 0;
         }
       }
@@ -93,6 +119,19 @@ layout: base
           &lt;/body&gt;
         &lt;/html&gt;
       </pre>
+      <div class="cursor"></div>
     </div>
+    <script>
+      const codeElement = document.querySelector('.code');
+      const cursorElement = document.querySelector('.cursor');
+
+      codeElement.addEventListener('animationend', () => {
+        cursorElement.style.display = 'none';
+      });
+
+      cursorElement.addEventListener('animationend', () => {
+        codeElement.innerHTML = '';
+      });
+    </script>
   </body>
 </html>
