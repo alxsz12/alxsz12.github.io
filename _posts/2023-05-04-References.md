@@ -1,9 +1,7 @@
 ---
 layout: post
 title: "References"
-date: 2023-05-04
 author: Alex Seitz
-categories: Links
 ---
 
 - [alxsz12's Github](https://github.com/alxsz12)

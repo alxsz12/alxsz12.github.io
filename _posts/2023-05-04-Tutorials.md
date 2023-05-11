@@ -1,7 +1,6 @@
 ---
 layout: post
 author: Alex Seitz
-tags: Links
 ---
 
 - [ ] [PROS Tutorial](_tutorials/PROS.md)
