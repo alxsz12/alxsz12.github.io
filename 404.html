@@ -23,7 +23,6 @@ layout: base
   <p>The requested page could not be found.</p>
 </div> -->
 
-<!DOCTYPE html>
 <html>
   <head>
     <title>You seem to have broken the website</title>
@@ -66,11 +65,12 @@ layout: base
 
       pre::selection {
         background-color: #0078d7;
-        color: #fff;
+        color: #2d2d2d;
       }
 
       .code {
         position: relative;
+        box-shadow: 0px 0px 0px 2px #0078d7;
         animation: delete 5s forwards;
       }
 
@@ -83,6 +83,16 @@ layout: base
         border-radius: 50%;
         background-color: #fff;
         animation: blink 1s infinite;
+        z-index: 1;
+      }
+
+      .highlight {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #0078d7;
+        opacity: 0.5;
+        z-index: 0;
       }
 
       @keyframes delete {
@@ -115,24 +125,44 @@ layout: base
             &lt;title&gt;404 Not Found&lt;/title&gt;
           &lt;/head&gt;
           &lt;body&gt;
-            &lt;h1&gt;404 Not Found&lt;/h1&gt;
-            &lt;p&gt;The requested resource could not be found on this server.&lt;/p&gt;
-          &lt;/body&gt;
-        &lt;/html&gt;
+            &lt;
+        <span class="highlight"></span>
       </pre>
       <div class="cursor"></div>
     </div>
     <script>
-      const codeElement = document.querySelector('.code');
-      const cursorElement = document.querySelector('.cursor');
+      const code = document.querySelector(".code");
+      const cursor = document.querySelector(".cursor");
+      const highlight = document.querySelector(".highlight");
 
-      codeElement.addEventListener('animationend', () => {
-        cursorElement.style.display = 'none';
-      });
+      let index = 0;
+      let selecting = true;
 
-      cursorElement.addEventListener('animationend', () => {
-        codeElement.innerHTML = '';
-      });
+      function moveCursor() {
+        const rect = code.getBoundingClientRect();
+        const charWidth = 9;
+        const x = rect.left + index * charWidth;
+        const y = rect.top + 20;
+        cursor.style.left = `${x}px`;
+        cursor.style.top = `${y}px`;
+      }
+
+      function deleteCode() {
+        if (index < code.innerText.length) {
+          if (selecting) {
+            highlight.style.display = "block";
+            highlight.style.width = `${(index + 1) * 9}px`;
+          } else {
+            highlight.style.display = "none";
+          }
+          selecting = !selecting;
+          index++;
+          moveCursor();
+          setTimeout(deleteCode, 50);
+        } else {
+          code.innerHTML = "";
+        }
+      }
+
+      deleteCode();
     </script>
-  </body>
-</html>
