@@ -23,6 +23,7 @@ layout: base
   <p>The requested page could not be found.</p>
 </div> -->
 
+<!DOCTYPE html>
 <html>
   <head>
     <title>You seem to have broken the website</title>
@@ -73,15 +74,6 @@ layout: base
         animation: delete 5s forwards;
       }
 
-      @keyframes delete {
-        0% {
-          opacity: 1;
-        }
-        100% {
-          opacity: 0;
-        }
-      }
-
       .cursor {
         position: absolute;
         top: 0;
@@ -91,6 +83,15 @@ layout: base
         border-radius: 50%;
         background-color: #fff;
         animation: blink 1s infinite;
+      }
+
+      @keyframes delete {
+        0% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+        }
       }
 
       @keyframes blink {
