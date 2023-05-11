@@ -1,8 +1,3 @@
----
-layout: post
-author: Alex Seitz
----
-
 ## Where to start?
 
 ### First, we should start by installing [Visual Studio Code](https://code.visualstudio.com/) (website) 
