@@ -1,7 +1,7 @@
 ---
 layout: base
 ---
-
+<!-- 
 <style type="text/css" media="screen">
   .container {
     margin: 10px auto;
@@ -21,4 +21,78 @@ layout: base
 
   <p><strong>Page not found :(</strong></p>
   <p>The requested page could not be found.</p>
-</div>
+</div> -->
+
+<html>
+  <head>
+    <title>You seem to have broken the website</title>
+    <style>
+      body {
+        background-color: #1e1e1e;
+        color: #d4d4d4;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 16px;
+        line-height: 1.5;
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        margin: 0 auto;
+        max-width: 800px;
+        padding: 50px;
+      }
+
+      h1 {
+        font-size: 36px;
+        font-weight: 700;
+        margin-bottom: 30px;
+      }
+
+      pre {
+        background-color: #2d2d2d;
+        border: none;
+        color: #d4d4d4;
+        font-family: 'Fira Code', 'Courier New', Courier, monospace;
+        font-size: 14px;
+        line-height: 1.5;
+        overflow-x: auto;
+        padding: 20px;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+      }
+
+      .code {
+        animation: delete 5s forwards;
+        opacity: 1;
+      }
+
+      @keyframes delete {
+        0% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>You seem to have broken the website</h1>
+      <p>Sorry about that! Here's what happened:</p>
+      <pre class="code">
+        &lt;!DOCTYPE html&gt;
+        &lt;html&gt;
+          &lt;head&gt;
+            &lt;title&gt;404 Not Found&lt;/title&gt;
+          &lt;/head&gt;
+          &lt;body&gt;
+            &lt;h1&gt;404 Not Found&lt;/h1&gt;
+            &lt;p&gt;The requested resource could not be found on this server.&lt;/p&gt;
+          &lt;/body&gt;
+        &lt;/html&gt;
+      </pre>
+    </div>
+  </body>
+</html>
