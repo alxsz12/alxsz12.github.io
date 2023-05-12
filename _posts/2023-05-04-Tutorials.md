@@ -16,4 +16,4 @@ author: Alex Seitz
 - [ ] [Auton Selection]()
 - [ ] [Pong]()
 
-#### Check Of The Tutorials You've Completed!
+##### Check Of The Tutorials You've Completed!
