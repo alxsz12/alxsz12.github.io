@@ -1,10 +1,9 @@
 ---
 layout: post
 author: Alex Seitz
-hidden: true
 ---
 
-- [ ] [PROS Tutorial](/../../../_tutorials/PROS.md)
+- [ ] [PROS Tutorial]()
 - [ ] [Okapilib Tutorial]()
 - [ ] [PID & Slew Tutorial]()
 - [ ] [Lift Pid]()

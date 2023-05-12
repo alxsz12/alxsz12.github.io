@@ -6,9 +6,12 @@ author:
 # The `>` after `description:` means to ignore line-breaks until next key.
 # If you want to omit the line-break after the end of text, use `>-` instead.
 description: >
-  Write an awesome description for your new site here. You can edit this line
-  in _config.yml. It will appear in your document head meta (for Google search
-  results) and in your feed.xml site description.
+  This is a online development documentation website, made by Alex Seitz from Niles
+  North Robotics Team 333R Los Robos. It was made to be used as a single place for 
+  Niles North teams to find programming tutorials, references, and to have it only 
+  be accessed by Niles North teams. By only having it be accessed by Niles North Teams,
+  we are allowing all of the notes on here to be in full detail, and fully explained, 
+  to ensure and to help the success of the Niles North Vex Robotics Club. 
 
 # Build settings
 
@@ -54,7 +57,8 @@ minima:
 #
 
 header_pages:
-  - README.md
+  - About.md
+  - References.md
   - Tutorials.md
 
 # Set to `true` to show excerpts on the homepage.
