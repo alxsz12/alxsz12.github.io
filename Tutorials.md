@@ -1,14 +1,10 @@
 ---
 layout: page
 title: Tutorials
+permalink: /tutorials/
 ---
-### Work
 
-<details>
-<summary>How do I dropdown?</summary>
-<br>
-
-- [ ] [PROS Tutorial]()
+- [ ] [PROS Tutorial](_tutorials/PROS.md)
 - [ ] [Okapilib Tutorial]()
 - [ ] [PID & Slew Tutorial]()
 - [ ] [Lift Pid]()
@@ -21,6 +17,4 @@ title: Tutorials
 - [ ] [Auton Selection]()
 - [ ] [Pong]()
 
-</details>
-
-##### Check Of The Tutorials You've Completed!
+###### Check Of The Tutorials You've Completed!
