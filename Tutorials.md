@@ -3,7 +3,7 @@ layout: page
 title: Tutorials
 ---
 
-- [ ] [PROS Tutorial](tutorials/PROS.md)
+- [X] [PROS Tutorial](tutorials/PROS.md)
 - [ ] [Okapilib Tutorial]()
 - [ ] [PID & Slew Tutorial]()
 - [ ] [Lift Pid]()
