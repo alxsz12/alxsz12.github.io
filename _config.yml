@@ -6,12 +6,10 @@ author:
 # The `>` after `description:` means to ignore line-breaks until next key.
 # If you want to omit the line-break after the end of text, use `>-` instead.
 description: >
-  This is a online development documentation website, made by Alex Seitz from Niles
-  North Robotics Team 333R Los Robos. It was made to be used as a single place for 
-  Niles North teams to find programming tutorials, references, and to have it only 
-  be accessed by Niles North teams. By only having it be accessed by Niles North Teams,
-  we are allowing all of the notes on here to be in full detail, and fully explained, 
-  to ensure and to help the success of the Niles North Vex Robotics Club. 
+  This is a online development documentation website, made by Alex Seitz from Niles North Robotics Team 333R Los Robos. 
+  It was made to be used as a single place for Niles North teams to find programming tutorials, references, and is intended 
+  only to be accessed by Niles North teams. By only having it be accessed by Niles North Teams, we are allowing all of the 
+  notes on here to be in full detail, and fully explained, to help the success of the Niles North Vex Robotics Club. 
 
 # Build settings
 
