@@ -1,7 +1,6 @@
 ---
 layout: page
 title: Tutorials
-permalink: /tutorials/
 ---
 
 - [ ] [PROS Tutorial](_tutorials/PROS.md)
