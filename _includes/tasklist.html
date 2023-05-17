@@ -1,6 +1,308 @@
-<p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="OJBBRbq" data-editable="true" data-user="Alexander-Seitz" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
-    <span>See the Pen <a href="https://codepen.io/Alexander-Seitz/pen/OJBBRbq">
-    Simple Angular Task List</a> by Alexander Seitz (<a href="https://codepen.io/Alexander-Seitz">@Alexander-Seitz</a>)
-    on <a href="https://codepen.io">CodePen</a>.</span>
-  </p>
+<div class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="QydOQW" data-user="hexagoncircle"  data-prefill='{"title":"Simple Angular Task List","description":"A simple angular task list application.","tags":["angular","animate","todo","list"],"scripts":["//ajax.googleapis.com/ajax/libs/angularjs/1.3.9/angular.js","//ajax.googleapis.com/ajax/libs/angularjs/1.3.9/angular-animate.js"],"stylesheets":[]}'>
+    <pre data-lang="pug">main(ng-app="TaskList" ng-controller="taskController")
+    form(name="form" ng-submit="addTask()")
+      div
+        input(type="text" name="task" placeholder="Add a new task" ng-model="newTask" required)
+        button(ng-disabled="form.$invalid") Add task
+    ul
+      li(ng-repeat="task in tasks" class="fade" ng-class="{'completed':task.done}") 
+        span {{task.title}}
+          input(type="checkbox" ng-attr-id="{{'task-'+$index}}" ng-model="task.done")
+          label(ng-attr-for="{{'task-'+$index}}")
+    p(ng-show="!(tasks | filter:title).length" class="fade all-complete") All tasks have been completed.
+    button(ng-click="clearCompleted()") Clear completed tasks</pre>
+    <pre data-lang="scss" data-option-autoprefixer="true">@import url(https://fonts.googleapis.com/css?family=Montserrat:400);
+  
+  $green: #66B266;
+  $gray: #ccc;
+  $gray-lite: #ededed;
+  
+  $color-body: $green;
+  $color-border: $gray-lite;
+  $color-button: $green;
+  $color-button-text: white;
+  $color-button-disabled: lighten($gray, 10%);
+  $color-complete: $gray;
+  $color-checkbox: lighten($green, 10%);
+  $color-checkbox-checked: $green;
+  $color-item: darken($green, 20%);
+  
+  $margin-element: 24px;
+  
+  $font: 'Montserrat', sans-serif;
+  
+  @mixin placeholder {
+    &.placeholder { @content; }
+    &:-moz-placeholder { @content; }
+    &::-moz-placeholder { @content; }
+    &::-webkit-input-placeholder { @content; }
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  html {
+    height: 100%;
+  }
+  
+  body {
+    position: relative;
+    height: 100%;
+    padding: 8%;
+    margin: 0;
+    background: lighten($color-body, 10%);
+    box-shadow: inset rgba(black, 0.2) 0 0 100px;
+  }
+  
+  main {
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    padding: $margin-element;
+    font-family: $font;
+    font-size: 18px;
+    line-height: 22px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: rgba(black, 0.2) 0 20px 20px -12px;
+  }
+  
+  p {
+    font-size: 14px;
+    margin-bottom: $margin-element;
+  }
+  
+  form > div {
+    display: block;
+    margin-bottom: $margin-element;
+    input {
+      width: 100%;
+      margin-bottom: 6px;
+    }
+    @media (min-width: 440px) {
+      display: flex;
+      input {
+        width: auto;
+        flex-grow: 2;
+        margin-right: 6px;
+        margin-bottom: 0;
+      }
+    }
+  }
+  
+  button {
+    padding: 12px 20px;
+    font-family: $font;
+    font-size: 14px;
+    text-transform: uppercase;
+    border: none;
+    background: $color-button;
+    color: $color-button-text;
+    box-shadow: inset darken($color-button, 20%) 0 -2px 0;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.2s ease-out;
+    border-radius: 0;
+    &:disabled {
+      background: $color-button-disabled;
+      box-shadow: inset darken($color-button-disabled, 5%) 0 -2px 0;
+      &:hover {
+        background: $color-button-disabled;
+      }
+    }
+    &:hover {
+      background: darken($color-button, 5%);
+    }
+    &:active {
+      box-shadow: inset darken($color-button, 15%) 0 0 0;
+      transform: translateY(2px);
+    }
+  }
+  
+  input {
+    padding: 10px;
+    font-family: $font;
+    font-size: 18px;
+    outline: none;
+    border: 1px solid $color-border;
+    transition: border 0.2s ease-out;
+    border-radius: 0;
+    box-shadow: none;
+    @include placeholder {
+      color: lighten($gray, 5%);
+      transition: opacity 0.2s ease-out,
+        transform 0.2s ease-out;
+    }
+    &:focus {
+      border: 1px solid $color-button;
+      @include placeholder {
+        opacity: 0;
+        transform: translateX(12px);
+      }
+    }
+  }
+  
+  input[type="checkbox"] {
+    position: absolute;
+    top: 0; right: 0; bottom: 0;
+    margin: auto;
+    display: none;
+    + label {
+      display: block;
+      position: absolute;
+      top: 0; right: 0; bottom: 0;
+      margin: auto;
+      width: 24px;
+      height: 24px;
+      background: lighten($color-checkbox, 15%);
+      border-radius: 100%;
+      cursor: pointer;
+      box-shadow: 
+        inset lighten($color-checkbox, 15%) 0 0 0 2px,
+        inset white 0 0 0 4px;
+      transition: box-shadow 0.1s ease-out;
+      &:before {
+        width: 0;
+        height: 0;
+      }
+      &:after {
+        opacity: 0;
+        content: "";
+        position: absolute;
+        top: -2px; right: 0; bottom: 0; left: 0;
+        margin: auto;
+        width: 3px;
+        height: 8px;
+        border-right: 3px solid white;
+        transform: rotate(90deg);
+        transition: opacity 0.2s ease-out;
+      }
+      &:hover {
+        box-shadow: 
+        inset $color-checkbox 0 0 0 12px,
+        inset white 0 0 0 12px;
+        &:after {
+          opacity: 1;
+        }
+      }
+    }
+    &:checked {
+      + label {
+        background: transparent;
+        box-shadow: none;
+        animation: bounce 0.4s linear;
+        &:before {
+          content: "";
+          position: absolute;
+          top: 0; right: 0; bottom: 0; left: 0;
+          margin: auto;
+          width: 100%;
+          height: 100%;
+          background: $color-checkbox-checked;
+          border-radius: 100%;
+        }
+        &:after {
+          opacity: 1;
+          border-bottom: 3px solid white;
+          transform: rotate(45deg);
+        }
+      }
+    }
+  }
+  
+  ul {
+    margin: 0 0 $margin-element;
+    border-top: 1px solid $color-border;
+    li {
+      color: $color-item;
+      position: relative;
+      padding: 16px 24px 16px 0;
+      background: white;
+      border-bottom: 1px solid $color-border;
+      transition: color 0.1s ease-out;
+      span {
+        display: block;
+      }
+    }
+  }
+  
+  .completed {
+    text-decoration: line-through;
+    color: $color-complete;
+  }
+  
+  @keyframes bounce {
+    0% {
+      transform: scale(0.8);
+    }
+    25% {
+      transform: scale(1.4);
+    }
+    50% {
+      transform: scale(0.9);
+    }
+    75% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  // Fade in and out items
+  .fade, .fade span {
+    transition: 0.2s ease-out;
+    &.all-complete {
+      transition-delay: 0.3s;
+    }
+    &.ng-enter {
+      opacity: 0;
+      transform: translateX(-24px); 
+    }
+    &.ng-enter.ng-enter-active {
+      opacity: 1;
+      transform: translateX(0); 
+    }
+    &.ng-leave {
+      opacity: 1;
+      span {
+       transform: translateX(0); 
+      }
+    }
+    &.ng-leave.ng-leave-active {
+      opacity: 0;
+      span {
+       transform: translateX(24px); 
+      }
+    }
+    &.ng-hide {
+      opacity: 0;
+      transition: 0s;
+    }
+    &.ng-show {
+      opacity: 1;
+    }
+  }</pre>
+    <pre data-lang="js">var app = angular.module('TaskList', ['ngAnimate']);
+  
+  app.controller('taskController', ['$scope', function($scope) {
+    // Setup array with a couple default tasks
+    $scope.tasks = [
+      {'title':'A default item', 'done':false},
+      {'title':'A completed default item', 'done':true}
+    ];
+    // Add new tasks
+    $scope.addTask = function() {
+      $scope.tasks.push({'title':$scope.newTask, 'done':false})
+      $scope.newTask = ''
+    }
+    // Clear completed tasks
+    $scope.clearCompleted = function() {
+      $scope.tasks = $scope.tasks.filter(function(task) {
+        return !task.done
+      })
+    }
+    
+  }]);</pre></div>
   <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
