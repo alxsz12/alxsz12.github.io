@@ -29,3 +29,6 @@ Now that you have PROS installed, you can go ahead and create your first project
 (Insert image here)
 
 From here go ahead and scroll down to the conductor section, and press "Create Project"
+
+For this tutorial go ahead and select C++ as your language of choice, and then you will be prompted to selected where you want
+to locate your PROS Projects. What I would recommend is that in your documents section, that you create a folder called VS Code Projects, and use that as the base to locate all of  your PROS Projects. Now go ahead and create your first project in that directory. 
