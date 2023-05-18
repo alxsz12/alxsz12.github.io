@@ -16,4 +16,8 @@ title: Tutorials
 - [ ] [Auton Selection]()
 - [ ] [Pong]()
 
+
+## Tutorials are in recommended order that you should complete them
+
+
 ###### Check Of The Tutorials You've Completed!
