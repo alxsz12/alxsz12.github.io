@@ -14,6 +14,8 @@ Now we need to install the PROS extension through the VS-Code Extensions.
 ![VSCODE EXTENSIONS](/tutorials/imgs/Extensionsimg.png)
 
 Now we can just search PROS
-(insert image here)
+![PROS Install](/tutorials/imgs/PROSinstall.png)
 And press install
 
+> Note: Now the next step is very important. After PROS is done installing you will be prompted with a message asking if you want to install the CLI, MAKE SURE TO CLICK INSTALL
+![CLI Install](/tutorials/imgs/proscli.png)
