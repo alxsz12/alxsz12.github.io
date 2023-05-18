@@ -55,3 +55,51 @@ title: Tutorials
     color: gray;
   }
 </style>
+
+//-----------------
+# Interactive Task List
+
+<ol id="task-list">
+  <li>
+    <input type="checkbox" id="task1">
+    <label for="task1">
+      <a href="https://example.com/task1">Task 1</a>
+    </label>
+  </li>
+  <li>
+    <input type="checkbox" id="task2" checked>
+    <label for="task2">
+      <a href="https://example.com/task2">Task 2</a>
+    </label>
+  </li>
+  <li>
+    <input type="checkbox" id="task3">
+    <label for="task3">
+      <a href="https://example.com/task3">Task 3</a>
+    </label>
+  </li>
+</ol>
+
+<script>
+  const taskList = document.getElementById('task-list');
+  const checkboxes = taskList.querySelectorAll('input[type="checkbox"]');
+
+  checkboxes.forEach((checkbox) => {
+    checkbox.addEventListener('change', function() {
+      const label = this.nextElementSibling;
+      if (this.checked) {
+        label.classList.add('checked');
+      } else {
+        label.classList.remove('checked');
+      }
+    });
+  });
+</script>
+
+<style>
+  .checked {
+    text-decoration: line-through;
+    color: gray;
+  }
+</style>
+
