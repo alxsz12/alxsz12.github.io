@@ -13,4 +13,7 @@ However, if you do not have a computer or a laptop that can install or run VS-Co
 Now we need to install the PROS extension through the VS-Code Extensions. 
 ![VSCODE EXTENSIONS](/tutorials/imgs/Extensionsimg.png)
 
+Now we can just search PROS
+(insert image here)
+And press install
 
