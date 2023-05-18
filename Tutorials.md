@@ -4,16 +4,16 @@ title: Tutorials
 ---
 
 - [ ] [PROS Tutorial](tutorials/PROS.md)
-- [ ] [Okapilib Tutorial]()
-- [ ] [PID & Slew Tutorial]()
-- [ ] [Lift Pid]()
+- [ ] [LVGL Tutorial](tutorials/LVGL.md)
+- [ ] [Auton Selection]()
+- [ ] [State Machines]()
 - [ ] [Inertial Tutorial]()
+- [ ] [PID & Slew Tutorial]()
+- [ ] [Okapilib Tutorial]()
+- [ ] [Lift Pid]()
 - [ ] [Odometry Tutorial]()
 - [ ] [Pure Pursuit]()
-- [ ] [State Machines]()
 - [ ] [Sylib Controller Tutorial]()
-- [ ] [LVGL Tutorial]()
-- [ ] [Auton Selection]()
 - [ ] [Pong]()
 
 
