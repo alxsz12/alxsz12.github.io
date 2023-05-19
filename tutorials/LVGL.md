@@ -23,7 +23,7 @@ The first thing that you need to know about LVGL is essentially everything that 
 <summary>List Of Widgets</summary>
 <br>
 
-- [Base Object]()
+* [Base Object]()
 - [Arc]()
 - [Bar]()
 - [Button]()
