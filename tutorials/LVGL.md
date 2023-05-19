@@ -15,7 +15,7 @@ What the developers of PROS has done, is they have incorporated LVGL into the PR
 
 #### Widgets 
 
-The first thing that you need to know about LVGL is essentially everything that can be displayed on the brain is called a "Widget". This is just a name for hte objects that are displayed onto the screen. 
+The first thing that you need to know about LVGL is essentially everything that can be displayed on the brain is called a "Widget". This is just a name for the objects that are displayed onto the screen. 
 
 ### List of Widgets
 
