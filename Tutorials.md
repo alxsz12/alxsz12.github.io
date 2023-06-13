@@ -5,7 +5,7 @@ title: Tutorials
 
 - [ ] [PROS Tutorial](tutorials/PROS.md)
 - [ ] [LVGL Tutorial](tutorials/LVGL.md)
-- [ ] [Auton Selection]()
+- [ ] [Auton Selection](tutorials/Auton.md)
 - [ ] [State Machines]()
 - [ ] [Inertial Tutorial]()
 - [ ] [PID & Slew Tutorial]()
