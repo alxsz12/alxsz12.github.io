@@ -12,4 +12,9 @@ Why have an auton selector? It is pretty self explanatory. Lets say that you onl
 However, lets say that you wanted to go even further, and make 5 different strategies. Well the best way to be able to easily change through these autons is with a auton selector.
 
 This tutorial will go over how to create a auton selector using LVGL to display a dropdown menu on the brain screen. 
->Note: This auton selector will require a Micro SD Card, explanation below, can be purchased [HERE](https://www.amazon.com/dp/B09WW69YRD/ref=twister_B0BSYDVHBC?_encoding=UTF8&th=1) (It is recommended that you buy the 5 pack as it these are really cheap SD Cards, and the SD Card insert on the brain is known to break the cards from time to time)
+>NOTE: This auton selector will require a Micro SD Card, explanation below, can be purchased [HERE](https://www.amazon.com/dp/B09WW69YRD/ref=twister_B0BSYDVHBC?_encoding=UTF8&th=1) 
+(It is recommended that you buy the 5 pack as it these are really cheap SD Cards, and the SD Card insert on the brain is known to break the cards from time to time)
+
+This is what the brain screen will look like at the end of the tutorial:
+![LOOK](/tutorials/imgs/Auton/Look.jpg)
+
