@@ -11,7 +11,7 @@ title: Tutorials
 - [ ] [PID & Slew Tutorial]()
 - [ ] [Okapilib Tutorial]()
 - [ ] [Lift Pid]()
-- [ ] [Odometry Tutorial]()
+- [ ] [Odometry Tutorial](tutorials/Odom.md)
 - [ ] [Pure Pursuit]()
 - [ ] [Sylib Controller Tutorial]()
 - [ ] [Pong]()
